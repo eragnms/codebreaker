@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 
+from random import randrange
+
 def main():
-    one_pin = Pin("red")
-    print(one_pin.color)
+    all_pins = [Pin("red"), Pin("green"), Pin("yellow"), Pin("orange"), Pin("blue"), Pin("purple")]
+    for n in range(4):
+        index = randrange(len(all_pins))
+        pin = all_pins[index]
+        print(pin.color)
+
 
 
 class Pin:
